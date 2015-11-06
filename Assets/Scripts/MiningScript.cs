@@ -8,16 +8,16 @@ public class MiningScript : MonoBehaviour {
 
     private CircleCollider2D _circle;
 
-	// Use this for initialization
-	public void Start () {
+    // Use this for initialization
+    public void Start () {
         _circle = gameObject.GetComponent<CircleCollider2D>();
         Size = _circle.radius;
-	}
-	
-	// Update is called once per frame
-	public void Update () {
+    }
+    
+    // Update is called once per frame
+    public void Update () {
         _circle.radius = Size;
-	}
+    }
 
     public void OnTriggerStay2D(Collider2D other) {
         Debug.Log(other.gameObject);

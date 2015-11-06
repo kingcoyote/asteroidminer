@@ -9,14 +9,14 @@ public class ShieldScript : MonoBehaviour
     private PlayerScript _player;
     private SpriteRenderer _renderer;
 
-	// Use this for initialization
-	public void Start ()
-	{
-	    _player = transform.parent.GetComponentInChildren<PlayerScript>();
-	    _renderer = gameObject.GetComponent<SpriteRenderer>();
+    // Use this for initialization
+    public void Start ()
+    {
+        _player = transform.parent.GetComponentInChildren<PlayerScript>();
+        _renderer = gameObject.GetComponent<SpriteRenderer>();
 
         _renderer.enabled = false;
-	}
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {

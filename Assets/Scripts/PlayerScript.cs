@@ -17,32 +17,32 @@ public class PlayerScript : MonoBehaviour {
     public int WeaponLevel { get; private set; }
     public int MiningLevel { get; private set; }
 
-	private Rigidbody2D _rigidBody2D;
-	private TurretScript _turret;
+    private Rigidbody2D _rigidBody2D;
+    private TurretScript _turret;
     private float _gunCooldown;
     private MiningScript _mining;
 
-	// Use this for initialization
-	public void Start () {
-		_rigidBody2D = gameObject.GetComponent<Rigidbody2D> ();
-		_turret = gameObject.GetComponentInChildren<TurretScript> ();
+    // Use this for initialization
+    public void Start () {
+        _rigidBody2D = gameObject.GetComponent<Rigidbody2D> ();
+        _turret = gameObject.GetComponentInChildren<TurretScript> ();
         _mining = gameObject.GetComponentInChildren<MiningScript>();
 
-	    EngineLevel = 1;
+        EngineLevel = 1;
         HealthLevel = 1;
         ShieldLevel = 1;
         WeaponLevel = 1;
         MiningLevel = 1;
-	}
-	
-	// Update is called once per frame
-	public void FixedUpdate () {
-		var force = new Vector2 (0, Input.GetAxis ("Vertical")) * EngineForce;
-		_rigidBody2D.AddForce (force);
-	}
+    }
+    
+    // Update is called once per frame
+    public void FixedUpdate () {
+        var force = new Vector2 (0, Input.GetAxis ("Vertical")) * EngineForce;
+        _rigidBody2D.AddForce (force);
+    }
 
-	public void Update()
-	{
+    public void Update()
+    {
         if (HealthPercent <= 0)
         {
             DestroyPlayer();
@@ -55,9 +55,9 @@ public class PlayerScript : MonoBehaviour {
             _turret.Fire();
         }
 
-	    ShieldPercent += 0.025f * Time.deltaTime;
+        ShieldPercent += 0.025f * Time.deltaTime;
         if (ShieldPercent > 1.0f) ShieldPercent = 1.0f;
-	}
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
