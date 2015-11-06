@@ -116,11 +116,11 @@ RectTransform:
   - {fileID: 1603550561}
   m_Father: {fileID: 531323616}
   m_RootOrder: 4
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 90, y: 20.3999996}
-  m_SizeDelta: {x: 60, y: 32}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: .800000012, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: 2}
+  m_SizeDelta: {x: -6, y: -24}
+  m_Pivot: {x: .5, y: 0}
 --- !u!114 &89951471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8fda98de44305d649a8cacdfc5e381e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Engine
+  m_Text: 'Engines
 
     (20)'
 --- !u!222 &143403269
@@ -598,10 +598,10 @@ RectTransform:
   - {fileID: 2066114202}
   m_Father: {fileID: 1674793492}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 6.19888306e-06, y: 0}
-  m_SizeDelta: {x: 310.299988, y: 60.4000015}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 72}
   m_Pivot: {x: .5, y: 0}
 --- !u!114 &531323617
 MonoBehaviour:
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: .875862181, a: .828999996}
+  m_Color: {r: 0, g: 0, b: 0, a: .828999996}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -668,11 +668,11 @@ RectTransform:
   - {fileID: 1773682898}
   m_Father: {fileID: 1674793492}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: 1}
-  m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40.5999985}
-  m_SizeDelta: {x: 320, y: 40.5999985}
-  m_Pivot: {x: .5, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -6.07967377e-06, y: -3.81469727e-06}
+  m_SizeDelta: {x: 0, y: 48}
+  m_Pivot: {x: .5, y: 1.0000006}
 --- !u!114 &534252071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: .875862181, a: .828999996}
+  m_Color: {r: 0, g: 0, b: 0, a: .828999996}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -737,11 +737,11 @@ RectTransform:
   - {fileID: 1042200168}
   m_Father: {fileID: 531323616}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -90, y: 20.3999996}
-  m_SizeDelta: {x: 60, y: 32}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: .200000003, y: 0}
+  m_AnchorMax: {x: .400000006, y: 1}
+  m_AnchoredPosition: {x: -2, y: 2}
+  m_SizeDelta: {x: -6, y: -24}
+  m_Pivot: {x: .5, y: 0}
 --- !u!114 &550442852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8fda98de44305d649a8cacdfc5e381e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1171,11 +1171,11 @@ RectTransform:
   - {fileID: 1965608364}
   m_Father: {fileID: 531323616}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -30, y: 20.3999996}
-  m_SizeDelta: {x: 60, y: 32}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: .400000006, y: 0}
+  m_AnchorMax: {x: .600000024, y: 1}
+  m_AnchoredPosition: {x: -1.5, y: 2}
+  m_SizeDelta: {x: -1, y: -24}
+  m_Pivot: {x: .5, y: 0}
 --- !u!114 &1053751709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8fda98de44305d649a8cacdfc5e381e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1291,10 +1291,10 @@ RectTransform:
   - {fileID: 487697124}
   m_Father: {fileID: 534252070}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -165, y: -12}
-  m_SizeDelta: {x: -170, y: 16}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: -58, y: 0}
+  m_SizeDelta: {x: -72, y: -28}
   m_Pivot: {x: 1, y: .5}
 --- !u!114 &1075578356
 MonoBehaviour:
@@ -1374,10 +1374,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 534252070}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -3.09944153e-06, y: -9.00001526}
-  m_SizeDelta: {x: 160, y: 18}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 1.54972076e-06, y: .299999237}
+  m_SizeDelta: {x: 96, y: -8}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1118683930
 MonoBehaviour:
@@ -1405,12 +1405,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50000
+  m_Text: 'Minerals
+
+    50000'
 --- !u!222 &1118683931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1520,7 +1522,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8fda98de44305d649a8cacdfc5e381e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1547,11 +1549,11 @@ RectTransform:
   - {fileID: 1678124699}
   m_Father: {fileID: 531323616}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 30, y: 20.3999996}
-  m_SizeDelta: {x: 60, y: 32}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: .600000024, y: 0}
+  m_AnchorMax: {x: .800000012, y: 1}
+  m_AnchoredPosition: {x: 0, y: 2}
+  m_SizeDelta: {x: -4, y: -24}
+  m_Pivot: {x: .5, y: 0}
 --- !u!1 &1206692091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,11 +1652,11 @@ RectTransform:
   - {fileID: 143403267}
   m_Father: {fileID: 531323616}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -150, y: 20.3999996}
-  m_SizeDelta: {x: 60, y: 32}
-  m_Pivot: {x: 0, y: .5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: .200000003, y: 1}
+  m_AnchoredPosition: {x: -.5, y: 2}
+  m_SizeDelta: {x: -9, y: -24}
+  m_Pivot: {x: .5, y: 0}
 --- !u!114 &1363123798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,7 +1728,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8fda98de44305d649a8cacdfc5e381e6, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2075,7 +2077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Weapon
+  m_Text: 'Weapons
 
     (20)'
 --- !u!222 &1678124701
@@ -2174,10 +2176,10 @@ RectTransform:
   - {fileID: 311524668}
   m_Father: {fileID: 534252070}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 165, y: -12}
-  m_SizeDelta: {x: -170, y: 16}
+  m_AnchoredPosition: {x: 58, y: 0}
+  m_SizeDelta: {x: -72, y: -28}
   m_Pivot: {x: -2.23517418e-08, y: .5}
 --- !u!114 &1773682899
 MonoBehaviour:
@@ -2417,7 +2419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Shield
+  m_Text: 'Shields
 
     (20)'
 --- !u!222 &1965608366
@@ -2514,8 +2516,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3.5}
-  m_SizeDelta: {x: 160, y: 19.6000004}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 22}
   m_Pivot: {x: .5, y: 1}
 --- !u!114 &2066114203
 MonoBehaviour:
@@ -2543,7 +2545,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0

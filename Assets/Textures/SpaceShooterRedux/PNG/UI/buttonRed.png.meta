@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 guid: f8fac15af3a8aab4a88cf95018b40867
-timeCreated: 1446779998
+timeCreated: 1446843520
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: buttonRed_0
+    21300002: buttonRed_1
+    21300004: buttonRed_2
+    21300006: buttonRed_3
+    21300008: buttonRed_4
+    21300010: buttonRed_5
+    21300012: buttonRed_6
+    21300014: buttonRed_7
+    21300016: buttonRed_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +39,116 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 10, y: 10, z: 10, w: 10}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: buttonRed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 29
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 10
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 29
+        width: 202
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 202
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: buttonRed_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 10
+        width: 202
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

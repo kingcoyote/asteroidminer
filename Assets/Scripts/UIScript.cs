@@ -36,10 +36,10 @@ public class UIScript : MonoBehaviour
         _shield.value = Player.ShieldPercent * 100;
         _money.text = string.Format("{0}", Player.Money);
 
-	    _engineUpgrade.text = string.Format("Engine+\n{0}", PlayerScript.CostOfUpgrade(Player.EngineLevel));
-        _healthUpgrade.text = string.Format("Health+\n{0}", PlayerScript.CostOfUpgrade(Player.HealthLevel));
-        _shieldUpgrade.text = string.Format("Shield+\n{0}", PlayerScript.CostOfUpgrade(Player.ShieldLevel));
-        _weaponUpgrade.text = string.Format("Weapon+\n{0}", PlayerScript.CostOfUpgrade(Player.WeaponLevel));
-        _miningUpgrade.text = string.Format("Mining+\n{0}", PlayerScript.CostOfUpgrade(Player.MiningLevel));
+	    _engineUpgrade.text = string.Format("Engines\n({0})", PlayerScript.CostOfUpgrade(Player.EngineLevel));
+        _healthUpgrade.text = string.Format("Health\n({0})", PlayerScript.CostOfUpgrade(Player.HealthLevel));
+        _shieldUpgrade.text = string.Format("Shields\n({0})", PlayerScript.CostOfUpgrade(Player.ShieldLevel));
+        _weaponUpgrade.text = string.Format("Weapons\n({0})", PlayerScript.CostOfUpgrade(Player.WeaponLevel));
+        _miningUpgrade.text = string.Format("Mining\n({0})", PlayerScript.CostOfUpgrade(Player.MiningLevel));
 	}
 }
