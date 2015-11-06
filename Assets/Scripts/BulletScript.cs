@@ -14,7 +14,10 @@ public class BulletScript : MonoBehaviour {
         if (other.gameObject.layer == LayerMask.NameToLayer("Asteroids"))
         {
             other.gameObject.GetComponent<AsteroidScript>().Health -= 1;
-            other.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(gameObject.GetComponent<Rigidbody2D>().velocity * Speed * Speed, gameObject.transform.position);
+            other.gameObject.GetComponent<Rigidbody2D>().AddForceAtPosition(
+                gameObject.GetComponent<Rigidbody2D>().velocity * Speed * Speed, 
+                gameObject.transform.position
+            );
             Destroy(gameObject);
         }
     }

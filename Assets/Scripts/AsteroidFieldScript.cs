@@ -45,7 +45,6 @@ public class AsteroidFieldScript : MonoBehaviour {
 		var asteroid = Instantiate (Asteroids [Random.Range (0, Asteroids.Count - 1)]);
 	    asteroid.transform.parent = transform;
 		asteroid.transform.position = loc;
-		asteroid.GetComponent<SpaceBodyScript>().Direction = dir;
-		asteroid.GetComponent<SpaceBodyScript>().Speed = speed;
+        asteroid.GetComponent<Rigidbody2D>().velocity = dir * speed;
 	}
 }
