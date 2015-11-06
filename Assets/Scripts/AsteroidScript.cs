@@ -7,10 +7,10 @@ public class AsteroidScript : MonoBehaviour {
     public List<Transform> Minerals;
     public int Health;
 
-	// Use this for initialization
-	public void Start () {
-		Destroy (gameObject, 20);
-	}
+    // Use this for initialization
+    public void Start () {
+        Destroy (gameObject, 20);
+    }
 
     public void Update()
     {
@@ -20,9 +20,9 @@ public class AsteroidScript : MonoBehaviour {
         }
     }
 
-	public void OnBecameInvisible() {
-		Destroy (gameObject);
-	}
+    public void OnBecameInvisible() {
+        Destroy (gameObject);
+    }
 
     private void DestroyAsteroid()
     {
