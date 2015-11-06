@@ -39,7 +39,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187070}
-  m_Mass: 1
+  m_Mass: 125
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
@@ -149,6 +149,10 @@ Prefab:
       propertyPath: Minerals.Array.data[0]
       value: 
       objectReference: {fileID: 491386, guid: 9fc336c4d1386514b9d225b1a1e15a84, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 187070}
