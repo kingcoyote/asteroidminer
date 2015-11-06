@@ -34,7 +34,7 @@ public class UIScript : MonoBehaviour
 	{
 	    _health.value = Player.HealthPercent * 100;
         _shield.value = Player.ShieldPercent * 100;
-        _money.text = string.Format("{0}", Player.Money);
+        _money.text = string.Format("Minerals\n{0}", Player.Money);
 
 	    _engineUpgrade.text = string.Format("Engines\n({0})", PlayerScript.CostOfUpgrade(Player.EngineLevel));
         _healthUpgrade.text = string.Format("Health\n({0})", PlayerScript.CostOfUpgrade(Player.HealthLevel));
