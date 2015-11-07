@@ -39,7 +39,7 @@ public class AsteroidFieldScript : MonoBehaviour {
             _boxCollider.bounds.min.x + Random.Range (0.0f, _boxCollider.bounds.size.x), 
             _boxCollider.bounds.min.y + Random.Range (0.0f, _boxCollider.bounds.size.y)
         );
-        var dir = new Vector2 (-1, Random.Range (-0.33f, 0.33f));
+        var dir = new Vector2 (-1, Random.Range (-0.2f, 0.2f));
         var speed = Random.Range (3, 5);
 
         var asteroid = Instantiate (Asteroids [Random.Range (0, Asteroids.Count - 1)]);
