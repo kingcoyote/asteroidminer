@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetButton("Fire1") && _gunCooldown <= 0)
         {
             _gunCooldown = GunCooldown;
-            _turret.Fire();
+            _turret.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
 
         ShieldPercent += 0.025f * Time.deltaTime;
