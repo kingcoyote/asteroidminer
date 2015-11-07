@@ -90,6 +90,11 @@ MonoBehaviour:
   - {fileID: 491386, guid: 9fc336c4d1386514b9d225b1a1e15a84, type: 2}
   - {fileID: 487858, guid: 606d42173b8681145ab4d79505e23318, type: 2}
   - {fileID: 487858, guid: 606d42173b8681145ab4d79505e23318, type: 2}
+  SubAsteroids:
+  - {fileID: 473178, guid: b016c6e07301c7f4db9c08e926d7aa11, type: 2}
+  - {fileID: 402088, guid: 6306bae9ae279b142a84a5c30d195bd7, type: 2}
+  - {fileID: 452638, guid: 6647f26e8485c8443a46e7230f948290, type: 2}
+  - {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
   Health: 4
 --- !u!114 &11496170
 MonoBehaviour:
@@ -143,6 +148,10 @@ Prefab:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+      propertyPath: SubAsteroids.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -174,6 +183,22 @@ Prefab:
       propertyPath: m_Mass
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SubAsteroids.Array.data[0]
+      value: 
+      objectReference: {fileID: 473178, guid: b016c6e07301c7f4db9c08e926d7aa11, type: 2}
+    - target: {fileID: 0}
+      propertyPath: SubAsteroids.Array.data[1]
+      value: 
+      objectReference: {fileID: 402088, guid: 6306bae9ae279b142a84a5c30d195bd7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: SubAsteroids.Array.data[2]
+      value: 
+      objectReference: {fileID: 452638, guid: 6647f26e8485c8443a46e7230f948290, type: 2}
+    - target: {fileID: 0}
+      propertyPath: SubAsteroids.Array.data[3]
+      value: 
+      objectReference: {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 173348}
