@@ -20,7 +20,6 @@ public class MiningScript : MonoBehaviour {
     }
 
     public void OnTriggerStay2D(Collider2D other) {
-        Debug.Log(other.gameObject);
         other.gameObject.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - other.gameObject.transform.position).normalized * Force);
     }
 }

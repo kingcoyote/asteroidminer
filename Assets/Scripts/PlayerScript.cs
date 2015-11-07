@@ -59,15 +59,6 @@ public class PlayerScript : MonoBehaviour {
         if (ShieldPercent > 1.0f) ShieldPercent = 1.0f;
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.GetComponentInChildren<MineralScript>() != null)
-        {
-            Money += other.gameObject.GetComponentInChildren<MineralScript>().Value;
-            Destroy(other.gameObject);
-        }
-    }
-
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.GetComponentInChildren<AsteroidScript>() != null)
