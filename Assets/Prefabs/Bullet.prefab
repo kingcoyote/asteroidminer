@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 25
+  HitParticles: {fileID: 401372, guid: 3168a2e0f8b7bb949845f8ddde507ab8, type: 2}
 --- !u!212 &21231208
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -188,6 +189,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HitParticles
+      value: 
+      objectReference: {fileID: 401372, guid: 3168a2e0f8b7bb949845f8ddde507ab8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146820}

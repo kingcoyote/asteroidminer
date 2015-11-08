@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletScript : MonoBehaviour {
 
     public float Speed = 5;
+    public Transform HitParticles;
 
     // Use this for initialization
     public void Start () {
@@ -18,6 +19,12 @@ public class BulletScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody2D>().velocity * Speed * Speed, 
                 gameObject.transform.position
             );
+            var hit = Instantiate(HitParticles);
+            hit.transform.position = transform.position;
+            var vectorDelta = other.transform.position - transform.position;
+            var angle = 90 + Mathf.Atan2(vectorDelta.y, vectorDelta.x) * Mathf.Rad2Deg;
+            hit.transform.localEulerAngles = new Vector3(0, 0, angle);
+            Destroy(hit.gameObject, 2.5f);
             Destroy(gameObject);
         }
     }
