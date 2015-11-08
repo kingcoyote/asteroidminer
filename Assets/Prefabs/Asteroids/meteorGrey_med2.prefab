@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11444474}
   - 60: {fileID: 6045686}
   - 50: {fileID: 5077600}
-  - 114: {fileID: 11454918}
   m_Layer: 8
   m_Name: meteorGrey_med2
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.71685839, y: -3.31626344, z: 0}
+  m_LocalPosition: {x: 3.72408628, y: 1.90953648, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,15 +60,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.126666665, y: .266666681}
-      - {x: -.273333341, y: .239999995}
-      - {x: -.300000012, y: .186666667}
-      - {x: -.300000012, y: -.119999997}
-      - {x: -.206666663, y: -.266666681}
-      - {x: .206666663, y: -.266666681}
-      - {x: .300000012, y: -.0666666701}
-      - {x: .300000012, y: .173333332}
-      - {x: .193333328, y: .266666681}
+    - - {x: -.180151224, y: .172231078}
+      - {x: -.266115427, y: -.0635259151}
+      - {x: -.0908946991, y: -.210192561}
+      - {x: .0795998573, y: -.227134824}
+      - {x: .263292074, y: .0349868536}
+      - {x: .102974892, y: .229958415}
 --- !u!114 &11444474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,20 +85,6 @@ MonoBehaviour:
   - {fileID: 489920, guid: f00d25187b60c6e46b98ba61dd50b827, type: 2}
   - {fileID: 407668, guid: bb046fef442beb04ea64a5f2e015faf3, type: 2}
   Health: 3
---- !u!114 &11454918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21253708
 SpriteRenderer:
   m_ObjectHideFlags: 1

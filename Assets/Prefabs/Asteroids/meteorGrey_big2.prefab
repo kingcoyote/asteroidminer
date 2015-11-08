@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11443872}
   - 60: {fileID: 6082450}
   - 50: {fileID: 5025326}
-  - 114: {fileID: 11497340}
   m_Layer: 8
   m_Name: meteorGrey_big2
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.47398186, y: -1.87871969, z: 0}
+  m_LocalPosition: {x: 3.69261312, y: 2.02537632, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,27 +60,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .586666644, y: -.280000001}
-      - {x: .639999986, y: -.25333333}
-      - {x: .680000007, y: -.146666661}
-      - {x: .800000012, y: .25333333}
-      - {x: .800000012, y: .413333327}
-      - {x: .75999999, y: .439999998}
-      - {x: .546666682, y: .519999981}
-      - {x: .159999996, y: .653333306}
-      - {x: -.0533333346, y: .653333306}
-      - {x: -.546666682, y: .573333323}
-      - {x: -.573333323, y: .546666682}
-      - {x: -.706666648, y: .306666672}
-      - {x: -.800000012, y: .119999997}
-      - {x: -.800000012, y: -.106666669}
-      - {x: -.75999999, y: -.373333335}
-      - {x: -.626666665, y: -.479999989}
-      - {x: -.400000006, y: -.653333306}
-      - {x: -.306666672, y: -.653333306}
-      - {x: -.159999996, y: -.519999981}
-      - {x: .0133333337, y: -.439999998}
-      - {x: .453333348, y: -.319999993}
+    - - {x: .581019402, y: -.206583619}
+      - {x: .759999752, y: .363759995}
+      - {x: .0941455364, y: .601794958}
+      - {x: -.501752377, y: .520897388}
+      - {x: -.759914637, y: .0570087433}
+      - {x: -.674102783, y: -.336111188}
+      - {x: -.337878466, y: -.591211677}
+      - {x: -.134586573, y: -.398580551}
 --- !u!114 &11443872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,20 +90,6 @@ MonoBehaviour:
   - {fileID: 451016, guid: c73424dc8e828894299367320ccb58fc, type: 2}
   - {fileID: 489920, guid: f00d25187b60c6e46b98ba61dd50b827, type: 2}
   Health: 4
---- !u!114 &11497340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21254296
 SpriteRenderer:
   m_ObjectHideFlags: 1

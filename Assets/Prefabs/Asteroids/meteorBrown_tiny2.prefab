@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11473344}
   - 60: {fileID: 6062718}
   - 50: {fileID: 5027600}
-  - 114: {fileID: 11493940}
   m_Layer: 8
   m_Name: meteorBrown_tiny2
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.55542469, y: 1.99965286, z: 0}
+  m_LocalPosition: {x: 3.74987793, y: 1.90512013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,14 +60,10 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.0933333337, y: .100000001}
-      - {x: -.106666669, y: .086666666}
-      - {x: -.106666669, y: -.086666666}
-      - {x: -.0933333337, y: -.100000001}
-      - {x: .0666666701, y: -.100000001}
-      - {x: .106666669, y: -.0733333305}
-      - {x: .106666669, y: .086666666}
-      - {x: .0799999982, y: .100000001}
+    - - {x: -.00743603706, y: .0713675022}
+      - {x: -.0589745045, y: -.00551319122}
+      - {x: .02085495, y: -.0627778769}
+      - {x: .0685470104, y: .0255558491}
 --- !u!114 &11473344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,21 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Minerals: []
+  SubAsteroids: []
   Health: 1
---- !u!114 &11493940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21245510
 SpriteRenderer:
   m_ObjectHideFlags: 1

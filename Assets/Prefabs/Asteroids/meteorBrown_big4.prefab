@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11408938}
   - 60: {fileID: 6006598}
   - 50: {fileID: 5070264}
-  - 114: {fileID: 11472272}
   m_Layer: 8
   m_Name: meteorBrown_big4
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.67193508, y: -.635843456, z: 0}
+  m_LocalPosition: {x: 3.81859541, y: 2.09409404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,26 +60,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .573333323, y: -.173333332}
-      - {x: .653333306, y: .0533333346}
-      - {x: .653333306, y: .200000003}
-      - {x: .560000002, y: .306666672}
-      - {x: .453333348, y: .426666677}
-      - {x: .266666681, y: .639999986}
-      - {x: .0933333337, y: .639999986}
-      - {x: -.0266666673, y: .600000024}
-      - {x: -.479999989, y: .479999989}
-      - {x: -.50666666, y: .439999998}
-      - {x: -.639999986, y: .0133333337}
-      - {x: -.653333306, y: -.0266666673}
-      - {x: -.653333306, y: -.200000003}
-      - {x: -.50666666, y: -.386666656}
-      - {x: -.386666656, y: -.519999981}
-      - {x: -.280000001, y: -.639999986}
-      - {x: -.0133333337, y: -.639999986}
-      - {x: .106666669, y: -.626666665}
-      - {x: .426666677, y: -.600000024}
-      - {x: .466666669, y: -.533333361}
+    - - {x: .610384941, y: .136367083}
+      - {x: .212265491, y: .585598469}
+      - {x: -.440812111, y: .408504486}
+      - {x: -.618974209, y: -.148461819}
+      - {x: -.239914656, y: -.591324925}
+      - {x: .377991199, y: -.519829392}
 --- !u!114 &11408938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,20 +88,6 @@ MonoBehaviour:
   - {fileID: 452638, guid: 6647f26e8485c8443a46e7230f948290, type: 2}
   - {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
   Health: 4
---- !u!114 &11472272
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21258318
 SpriteRenderer:
   m_ObjectHideFlags: 1

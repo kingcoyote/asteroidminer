@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11455624}
   - 60: {fileID: 6097172}
   - 50: {fileID: 5032546}
-  - 114: {fileID: 11496170}
+  - 114: {fileID: 11405564}
   m_Layer: 8
   m_Name: meteorBrown_big1
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.74333763, y: .396792352, z: 0}
+  m_LocalPosition: {x: 3.51795602, y: 2.12272596, z: -1.83220148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,19 +61,30 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .540000021, y: -.333333343}
-      - {x: .673333347, y: -.0533333346}
-      - {x: .673333347, y: .0666666701}
-      - {x: .340000004, y: .560000002}
-      - {x: -.460000008, y: .560000002}
-      - {x: -.486666679, y: .546666682}
-      - {x: -.673333347, y: .0666666701}
-      - {x: -.673333347, y: -.200000003}
-      - {x: -.326666653, y: -.560000002}
-      - {x: -.219999999, y: -.560000002}
-      - {x: .153333336, y: -.426666677}
-      - {x: .326666653, y: -.49333334}
-      - {x: .526666641, y: -.439999998}
+    - - {x: .502778292, y: -.253162622}
+      - {x: .638974905, y: .00393128395}
+      - {x: .624658823, y: .00653886795}
+      - {x: .305640936, y: .517051458}
+      - {x: -.362649918, y: .517051458}
+      - {x: -.429401875, y: .515171051}
+      - {x: -.561667204, y: .0781197548}
+      - {x: -.630384922, y: -.13128233}
+      - {x: -.38106823, y: -.402521849}
+      - {x: -.277264833, y: -.511324883}
+      - {x: .133290529, y: -.352222562}
+      - {x: .269402027, y: -.370214105}
+      - {x: .43504262, y: -.391324878}
+--- !u!114 &11405564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11455624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,20 +107,6 @@ MonoBehaviour:
   - {fileID: 452638, guid: 6647f26e8485c8443a46e7230f948290, type: 2}
   - {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
   Health: 4
---- !u!114 &11496170
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21208654
 SpriteRenderer:
   m_ObjectHideFlags: 1

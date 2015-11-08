@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11438068}
   - 60: {fileID: 6042970}
   - 50: {fileID: 5044286}
-  - 114: {fileID: 11474866}
   m_Layer: 8
   m_Name: meteorGrey_big3
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1061933, y: -2.0883615, z: 0}
+  m_LocalPosition: {x: 3.55183983, y: 2.11001945, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,19 +60,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .379999995, y: .413333327}
-      - {x: .0333333351, y: .519999981}
-      - {x: -.0333333351, y: .546666682}
-      - {x: -.233333334, y: .546666682}
-      - {x: -.593333304, y: .293333322}
-      - {x: -.593333304, y: -.213333338}
-      - {x: -.446666658, y: -.413333327}
-      - {x: -.379999995, y: -.49333334}
-      - {x: .0199999996, y: -.546666682}
-      - {x: .340000004, y: -.546666682}
-      - {x: .593333304, y: -.0933333337}
-      - {x: .593333304, y: .0666666701}
-      - {x: .419999987, y: .386666656}
+    - - {x: .371529102, y: .339917183}
+      - {x: -.123691797, y: .498663425}
+      - {x: -.556625128, y: .234035492}
+      - {x: -.528388023, y: -.173801422}
+      - {x: -.364779234, y: -.418980837}
+      - {x: .0228238106, y: -.461955428}
+      - {x: .241170168, y: -.515605807}
+      - {x: .536859035, y: -.0170931816}
 --- !u!114 &11438068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,20 +90,6 @@ MonoBehaviour:
   - {fileID: 451016, guid: c73424dc8e828894299367320ccb58fc, type: 2}
   - {fileID: 489920, guid: f00d25187b60c6e46b98ba61dd50b827, type: 2}
   Health: 4
---- !u!114 &11474866
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 175326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21221494
 SpriteRenderer:
   m_ObjectHideFlags: 1

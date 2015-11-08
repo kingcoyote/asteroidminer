@@ -12,7 +12,6 @@ GameObject:
   - 114: {fileID: 11459108}
   - 60: {fileID: 6059400}
   - 50: {fileID: 5018362}
-  - 114: {fileID: 11467910}
   m_Layer: 8
   m_Name: meteorBrown_small1
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.50721598, y: 1.6103183, z: 0}
+  m_LocalPosition: {x: 3.78996325, y: 1.98815417, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,13 +60,12 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.146666661, y: .186666667}
-      - {x: -.186666667, y: .13333334}
-      - {x: -.186666667, y: -.146666661}
-      - {x: -.173333332, y: -.186666667}
-      - {x: .0799999982, y: -.186666667}
-      - {x: .186666667, y: -.146666661}
-      - {x: .186666667, y: .186666667}
+    - - {x: -.060769558, y: .143718004}
+      - {x: -.146581173, y: .0302569866}
+      - {x: -.0979063511, y: -.0894019604}
+      - {x: -.011623621, y: -.13226521}
+      - {x: .146581173, y: -.0378636122}
+      - {x: .117949009, y: .11508584}
 --- !u!114 &11459108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,20 +83,6 @@ MonoBehaviour:
   - {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
   - {fileID: 410090, guid: 319fe8e6f530540449c0108466962ce1, type: 2}
   Health: 2
---- !u!114 &11467910
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da8132be66b2f44f935656fe592f13d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0
-  Direction: {x: 0, y: 0}
-  _rigidbody2D: {fileID: 0}
 --- !u!212 &21206812
 SpriteRenderer:
   m_ObjectHideFlags: 1
