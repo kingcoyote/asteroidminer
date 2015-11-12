@@ -24,6 +24,7 @@ public class BulletScript : MonoBehaviour {
             var vectorDelta = other.transform.position - transform.position;
             var angle = 90 + Mathf.Atan2(vectorDelta.y, vectorDelta.x) * Mathf.Rad2Deg;
             hit.transform.localEulerAngles = new Vector3(0, 0, angle);
+            hit.transform.parent = other.transform;
             Destroy(hit.gameObject, 2.5f);
             Destroy(gameObject);
         }
