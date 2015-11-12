@@ -45,6 +45,10 @@ public class PlayerScript : MonoBehaviour {
 
     public void Update()
     {
+        var aimAxis = new Vector3(Input.GetAxis("HorizontalAim"), Input.GetAxis("VerticalAim"), 0);
+        if (aimAxis.magnitude > 0.3) Aim(transform.position + aimAxis);
+        if(Input.GetAxis("Fire2") > 0.5) Fire(); 
+        
         if (HealthPercent <= 0)
         {
             DestroyPlayer();
