@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -18,14 +20,14 @@ public class PlayerScript : MonoBehaviour {
     public int MiningLevel { get; private set; }
 
     private Rigidbody2D _rigidBody2D;
-    private TurretScript _turret;
+    private TurretScript[] _turrets;
     private float _gunCooldown;
     private MiningScript _mining;
 
     // Use this for initialization
     public void Start () {
         _rigidBody2D = gameObject.GetComponent<Rigidbody2D> ();
-        _turret = gameObject.GetComponentInChildren<TurretScript> ();
+        _turrets = gameObject.GetComponentsInChildren<TurretScript>();
         _mining = gameObject.GetComponentInChildren<MiningScript>();
 
         EngineLevel = 1;
@@ -49,12 +51,6 @@ public class PlayerScript : MonoBehaviour {
         }
 
         _gunCooldown -= Time.deltaTime;
-        if (Input.GetButton("Fire1") && _gunCooldown <= 0)
-        {
-            _gunCooldown = GunCooldown;
-            _turret.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        }
-
         ShieldPercent += 0.025f * Time.deltaTime;
         if (ShieldPercent > 1.0f) ShieldPercent = 1.0f;
     }
@@ -65,6 +61,25 @@ public class PlayerScript : MonoBehaviour {
         {
             HealthPercent -= other.gameObject.GetComponentInChildren<AsteroidScript>().Health / (float)Health;
             Destroy(other.gameObject);
+        }
+    }
+
+    public void Fire(Vector2 target)
+    {
+        if (_gunCooldown > 0) return;
+        _gunCooldown = GunCooldown;
+
+        foreach (var turret in _turrets)
+        {
+            turret.Fire(target);
+        }
+    }
+
+    public void Aim(Vector2 target)
+    {
+        foreach (var turret in _turrets)
+        {
+            turret.Aim(target);
         }
     }
 
