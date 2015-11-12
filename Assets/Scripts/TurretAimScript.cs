@@ -36,8 +36,6 @@ public class TurretAimScript : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(_mode);
-
         switch(_mode)
         {
             case Mode.Idle:
