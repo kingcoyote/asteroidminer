@@ -64,14 +64,14 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-    public void Fire(Vector2 target)
+    public void Fire()
     {
         if (_gunCooldown > 0) return;
         _gunCooldown = GunCooldown;
 
         foreach (var turret in _turrets)
         {
-            turret.Fire(target);
+            turret.Fire();
         }
     }
 

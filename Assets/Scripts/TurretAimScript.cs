@@ -45,7 +45,8 @@ public class TurretAimScript : MonoBehaviour
                 Player.Aim(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 break;
             case Mode.Fire:
-                Player.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                Player.Aim(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                Player.Fire();
                 break;
         }
     }

@@ -5,9 +5,7 @@ public class TurretScript : MonoBehaviour {
 
     public Transform Bullet;
 
-    public void Fire(Vector3 target) {
-        Aim(target);
-
+    public void Fire() {
         var b = Instantiate(Bullet) as Transform;
         b.transform.up = transform.right + new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
         b.transform.position = transform.position;
