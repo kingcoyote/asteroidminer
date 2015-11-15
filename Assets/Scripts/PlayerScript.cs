@@ -24,10 +24,14 @@ public class PlayerScript : MonoBehaviour {
     private float _gunCooldown;
     private MiningScript _mining;
 
+    private GameObject _turret1;
+    private GameObject _turret4;
+    private GameObject _turret6;
+    private GameObject _turret8;
+
     // Use this for initialization
     public void Start () {
         _rigidBody2D = gameObject.GetComponent<Rigidbody2D> ();
-        _turrets = gameObject.GetComponentsInChildren<TurretScript>();
         _mining = gameObject.GetComponentInChildren<MiningScript>();
 
         EngineLevel = 1;
@@ -35,8 +39,43 @@ public class PlayerScript : MonoBehaviour {
         ShieldLevel = 1;
         WeaponLevel = 1;
         MiningLevel = 1;
+
+        _turret1 = transform.Find("Turrets/Turret1").gameObject;
+        _turret4 = transform.Find("Turrets/Turret4").gameObject;
+        _turret6 = transform.Find("Turrets/Turret6").gameObject;
+        _turret8 = transform.Find("Turrets/Turret8").gameObject;
+
+        SetTurrets(1);
     }
-    
+
+    public void SetTurrets(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                _turret4.gameObject.SetActive(false);
+                _turret6.gameObject.SetActive(false);
+                _turret8.gameObject.SetActive(false);
+                break;
+            case 4:
+                _turret1.gameObject.SetActive(false);
+                _turret4.gameObject.SetActive(true);
+                break;
+            case 6:
+                _turret4.gameObject.SetActive(false);
+                _turret6.gameObject.SetActive(true);
+                break;
+            case 8:
+                _turret6.gameObject.SetActive(false);
+                _turret8.gameObject.SetActive(true);
+                break;
+            default:
+                return;
+        }
+
+        _turrets = gameObject.GetComponentsInChildren<TurretScript>();
+    }
+
     // Update is called once per frame
     public void FixedUpdate () {
         var force = new Vector2 (0, Input.GetAxis ("Vertical")) * EngineForce;
@@ -140,6 +179,8 @@ public class PlayerScript : MonoBehaviour {
         WeaponLevel++;
 
         GunCooldown *= 0.85f;
+
+        SetTurrets(WeaponLevel);
     }
 
     public void UpgradeMining()
