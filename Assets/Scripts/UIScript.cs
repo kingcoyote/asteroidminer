@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
-    public PlayerScript Player;
+    public PlayerScript PlayerPrefab;
+
+    private PlayerScript _player;
 
     private Slider _health;
     private Slider _shield;
@@ -20,6 +23,10 @@ public class UIScript : MonoBehaviour
     private Button _shieldUpgradeButton;
     private Button _weaponUpgradeButton;
     private Button _miningUpgradeButton;
+
+    private Transform _topMenuPanel;
+
+    private bool _isPaused;
 
     // Use this for initialization
     public void Start ()
@@ -39,25 +46,74 @@ public class UIScript : MonoBehaviour
         _shieldUpgrade = gameObject.transform.Find("UpgradePanel/ShieldUpgrade").GetComponentInChildren<Text>();
         _weaponUpgrade = gameObject.transform.Find("UpgradePanel/WeaponUpgrade").GetComponentInChildren<Text>();
         _miningUpgrade = gameObject.transform.Find("UpgradePanel/MiningUpgrade").GetComponentInChildren<Text>();
+
+        _topMenuPanel = gameObject.transform.Find("TopMenuPanel");
+
+        Pause();
     }
     
     // Update is called once per frame
     public void Update ()
     {
-        _health.value = Player.HealthPercent * 100;
-        _shield.value = Player.ShieldPercent * 100;
-        _money.text = string.Format("Minerals\n{0}", Player.Money);
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Pause();
+        }
 
-        _engineUpgradeButton.interactable = Player.Money > PlayerScript.CostOfUpgrade(Player.EngineLevel);
-        _healthUpgradeButton.interactable = Player.Money > PlayerScript.CostOfUpgrade(Player.HealthLevel);
-        _shieldUpgradeButton.interactable = Player.Money > PlayerScript.CostOfUpgrade(Player.ShieldLevel);
-        _weaponUpgradeButton.interactable = Player.Money > PlayerScript.CostOfUpgrade(Player.WeaponLevel);
-        _miningUpgradeButton.interactable = Player.Money > PlayerScript.CostOfUpgrade(Player.MiningLevel);
+        if (_player == null) return;
 
-        _engineUpgrade.text = string.Format("Engines\n({0})", PlayerScript.CostOfUpgrade(Player.EngineLevel));
-        _healthUpgrade.text = string.Format("Health\n({0})", PlayerScript.CostOfUpgrade(Player.HealthLevel));
-        _shieldUpgrade.text = string.Format("Shields\n({0})", PlayerScript.CostOfUpgrade(Player.ShieldLevel));
-        _weaponUpgrade.text = string.Format("Weapons\n({0})", PlayerScript.CostOfUpgrade(Player.WeaponLevel));
-        _miningUpgrade.text = string.Format("Mining\n({0})", PlayerScript.CostOfUpgrade(Player.MiningLevel));
+        _health.value = _player.HealthPercent * 100;
+        _shield.value = _player.ShieldPercent * 100;
+        _money.text = string.Format("Minerals\n{0}", _player.Money);
+
+        _engineUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.EngineLevel);
+        _healthUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.HealthLevel);
+        _shieldUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.ShieldLevel);
+        _weaponUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.WeaponLevel);
+        _miningUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.MiningLevel);
+
+        _engineUpgrade.text = string.Format("Engines\n({0})", PlayerScript.CostOfUpgrade(_player.EngineLevel));
+        _healthUpgrade.text = string.Format("Health\n({0})", PlayerScript.CostOfUpgrade(_player.HealthLevel));
+        _shieldUpgrade.text = string.Format("Shields\n({0})", PlayerScript.CostOfUpgrade(_player.ShieldLevel));
+        _weaponUpgrade.text = string.Format("Weapons\n({0})", PlayerScript.CostOfUpgrade(_player.WeaponLevel));
+        _miningUpgrade.text = string.Format("Mining\n({0})", PlayerScript.CostOfUpgrade(_player.MiningLevel));
+    }
+
+    private void Pause()
+    {
+        _isPaused = !_isPaused;
+
+        Time.timeScale = _isPaused ? 0 : 1;
+        _topMenuPanel.gameObject.SetActive(_isPaused);
+        _topMenuPanel.transform.Find("ResumeGameButton").GetComponent<Button>().interactable = _player != null;
+    }
+
+    public void NewGame()
+    {
+        foreach (var go in GameObject.FindGameObjectsWithTag("Disposable"))
+        {
+            Destroy(go);
+        }
+
+        _player = Instantiate(PlayerPrefab, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, -90)) as PlayerScript;
+        gameObject.GetComponentInChildren<TurretAimScript>().Player = _player;
+        Pause();
+    }
+
+    public void ResumeGame()
+    {
+        Pause();
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        if (EditorApplication.isPlaying)
+        {
+            EditorApplication.isPlaying = false;
+        }
+#else
+        Application.Quit();
+#endif
     }
 }

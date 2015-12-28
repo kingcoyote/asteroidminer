@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5032546}
   m_Layer: 8
   m_Name: meteorBrown_big1
-  m_TagString: Untagged
+  m_TagString: Disposable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,6 +184,10 @@ Prefab:
       propertyPath: SubAsteroids.Array.data[3]
       value: 
       objectReference: {fileID: 444590, guid: 7cb0e04f4e33ffe4a880ccdae3aaf797, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Disposable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 173348}
