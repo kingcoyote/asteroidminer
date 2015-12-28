@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.EventSystems;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -18,6 +16,8 @@ public class PlayerScript : MonoBehaviour {
     public int ShieldLevel { get; private set; }
     public int WeaponLevel { get; private set; }
     public int MiningLevel { get; private set; }
+
+    public Transform DeathAnimation;
 
     private Rigidbody2D _rigidBody2D;
     private TurretScript[] _turrets;
@@ -167,7 +167,9 @@ public class PlayerScript : MonoBehaviour {
 
     public void DestroyPlayer()
     {
-        Destroy(transform.parent.gameObject);
-        Time.timeScale = 0;
+        var death = Instantiate(DeathAnimation);
+        death.gameObject.SetActive(true);
+        death.transform.position = transform.position;
+        Destroy(gameObject);
     }
 }
