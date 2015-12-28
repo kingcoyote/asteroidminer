@@ -39,7 +39,6 @@ public class TurretAimScript : MonoBehaviour
         switch(_mode)
         {
             case Mode.Idle:
-                return;
                 break;
             case Mode.Aim:
                 Player.Aim(Camera.main.ScreenToWorldPoint(Input.mousePosition));
