@@ -40,39 +40,6 @@ public class PlayerScript : MonoBehaviour {
         WeaponLevel = 1;
         MiningLevel = 1;
 
-        _turret1 = transform.Find("Turrets/Turret1").gameObject;
-        _turret4 = transform.Find("Turrets/Turret4").gameObject;
-        _turret6 = transform.Find("Turrets/Turret6").gameObject;
-        _turret8 = transform.Find("Turrets/Turret8").gameObject;
-
-        SetTurrets(1);
-    }
-
-    public void SetTurrets(int level)
-    {
-        switch (level)
-        {
-            case 1:
-                _turret4.gameObject.SetActive(false);
-                _turret6.gameObject.SetActive(false);
-                _turret8.gameObject.SetActive(false);
-                break;
-            case 4:
-                _turret1.gameObject.SetActive(false);
-                _turret4.gameObject.SetActive(true);
-                break;
-            case 6:
-                _turret4.gameObject.SetActive(false);
-                _turret6.gameObject.SetActive(true);
-                break;
-            case 8:
-                _turret6.gameObject.SetActive(false);
-                _turret8.gameObject.SetActive(true);
-                break;
-            default:
-                return;
-        }
-
         _turrets = gameObject.GetComponentsInChildren<TurretScript>();
     }
 
@@ -179,8 +146,6 @@ public class PlayerScript : MonoBehaviour {
         WeaponLevel++;
 
         GunCooldown *= 0.85f;
-
-        SetTurrets(WeaponLevel);
     }
 
     public void UpgradeMining()
