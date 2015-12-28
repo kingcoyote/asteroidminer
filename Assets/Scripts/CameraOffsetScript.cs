@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[ExecuteInEditMode]
 public class CameraOffsetScript : MonoBehaviour
 {
 
@@ -27,4 +28,12 @@ public class CameraOffsetScript : MonoBehaviour
 	            break;
 	    }
 	}
+
+    public void Update()
+    {
+        if (Application.isEditor)
+        {
+            Start();
+        }
+    }
 }
