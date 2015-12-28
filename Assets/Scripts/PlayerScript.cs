@@ -24,10 +24,7 @@ public class PlayerScript : MonoBehaviour {
     private float _gunCooldown;
     private MiningScript _mining;
 
-    private GameObject _turret1;
-    private GameObject _turret4;
-    private GameObject _turret6;
-    private GameObject _turret8;
+    private AudioSource _audio;
 
     // Use this for initialization
     public void Start () {
@@ -39,6 +36,8 @@ public class PlayerScript : MonoBehaviour {
         ShieldLevel = 1;
         WeaponLevel = 1;
         MiningLevel = 1;
+
+        _audio = gameObject.GetComponent<AudioSource>();
 
         _turrets = gameObject.GetComponentsInChildren<TurretScript>();
     }
@@ -70,6 +69,7 @@ public class PlayerScript : MonoBehaviour {
         if (other.gameObject.GetComponentInChildren<AsteroidScript>() != null)
         {
             HealthPercent -= other.gameObject.GetComponentInChildren<AsteroidScript>().Health / (float)Health;
+            _audio.PlayOneShot(_audio.clip);
             Destroy(other.gameObject);
         }
     }

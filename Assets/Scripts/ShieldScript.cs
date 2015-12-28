@@ -9,6 +9,8 @@ public class ShieldScript : MonoBehaviour
     private PlayerScript _player;
     private SpriteRenderer _renderer;
 
+    private AudioSource _audio;
+
     // Use this for initialization
     public void Start ()
     {
@@ -16,6 +18,8 @@ public class ShieldScript : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
         _renderer.enabled = false;
+
+        _audio = gameObject.GetComponent<AudioSource>();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -34,6 +38,7 @@ public class ShieldScript : MonoBehaviour
     private IEnumerator Flicker()
     {
         _renderer.enabled = true;
+        _audio.PlayOneShot(_audio.clip);
         yield return new WaitForSeconds(Random.Range(0.2f, 0.3f));
         _renderer.enabled = false;
     }
