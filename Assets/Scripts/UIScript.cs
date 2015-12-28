@@ -116,4 +116,29 @@ public class UIScript : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void UpgradeEngine()
+    {
+        _player.UpgradeEngine();
+    }
+
+    public void UpgradeHealth()
+    {
+        _player.UpgradeHealth();
+    }
+
+    public void UpgradeShield()
+    {
+        _player.UpgradeShield();
+    }
+
+    public void UpgradeWeapon()
+    {
+        _player.UpgradeWeapon();
+    }
+
+    public void UpgradeMining()
+    {
+        _player.UpgradeMining();
+    }
 }
