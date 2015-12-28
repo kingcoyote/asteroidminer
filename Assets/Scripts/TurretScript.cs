@@ -5,10 +5,18 @@ public class TurretScript : MonoBehaviour {
 
     public Transform Bullet;
 
+    private AudioSource _audio;
+
+    public void Start()
+    {
+        _audio = gameObject.GetComponent<AudioSource>();
+    }
+
     public void Fire() {
         var b = Instantiate(Bullet) as Transform;
         b.transform.up = transform.right + new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
         b.transform.position = transform.position;
+        _audio.PlayOneShot(b.GetComponent<AudioSource>().clip);
         Destroy(b.gameObject, 5.0f);
     }
 
