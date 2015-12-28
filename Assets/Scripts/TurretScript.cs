@@ -4,6 +4,7 @@ using System.Collections;
 public class TurretScript : MonoBehaviour {
 
     public Transform Bullet;
+    public float Spread = 0.01f;
 
     private AudioSource _audio;
 
@@ -14,7 +15,7 @@ public class TurretScript : MonoBehaviour {
 
     public void Fire() {
         var b = Instantiate(Bullet) as Transform;
-        b.transform.up = transform.right + new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
+        b.transform.up = transform.right + new Vector3(Random.Range(-Spread, Spread), Random.Range(-Spread, Spread));
         b.transform.position = transform.position;
         _audio.PlayOneShot(b.GetComponent<AudioSource>().clip);
         Destroy(b.gameObject, 5.0f);

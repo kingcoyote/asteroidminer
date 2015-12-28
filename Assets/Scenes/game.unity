@@ -3314,6 +3314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 425740, guid: dbd1c43a7282fd24e8a86949affd1988, type: 2}
+  Spread: .0149999997
 --- !u!4 &1350912644
 Transform:
   m_ObjectHideFlags: 0
