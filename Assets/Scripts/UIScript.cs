@@ -64,7 +64,7 @@ public class UIScript : MonoBehaviour
 
         _health.value = _player.HealthPercent * 100;
         _shield.value = _player.ShieldPercent * 100;
-        _money.text = string.Format("Minerals\n{0}", _player.Money);
+        _money.text = string.Format("Minerals\n{0}\n{1:00}:{2:00}", _player.Money, (int)(_player.LifeSpan / 60), (int)(_player.LifeSpan % 60));
 
         _engineUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.EngineLevel);
         _healthUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.HealthLevel);
@@ -72,11 +72,11 @@ public class UIScript : MonoBehaviour
         _weaponUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.WeaponLevel);
         _miningUpgradeButton.interactable = _player.Money > PlayerScript.CostOfUpgrade(_player.MiningLevel);
 
-        _engineUpgrade.text = string.Format("Engines\n({0})", PlayerScript.CostOfUpgrade(_player.EngineLevel));
-        _healthUpgrade.text = string.Format("Health\n({0})", PlayerScript.CostOfUpgrade(_player.HealthLevel));
-        _shieldUpgrade.text = string.Format("Shields\n({0})", PlayerScript.CostOfUpgrade(_player.ShieldLevel));
-        _weaponUpgrade.text = string.Format("Weapons\n({0})", PlayerScript.CostOfUpgrade(_player.WeaponLevel));
-        _miningUpgrade.text = string.Format("Mining\n({0})", PlayerScript.CostOfUpgrade(_player.MiningLevel));
+        _engineUpgrade.text = string.Format("Ship Speed\n({0})", PlayerScript.CostOfUpgrade(_player.EngineLevel));
+        _healthUpgrade.text = string.Format("Full Health\n({0})", PlayerScript.CostOfUpgrade(_player.HealthLevel));
+        _shieldUpgrade.text = string.Format("Shield Speed\n({0})", PlayerScript.CostOfUpgrade(_player.ShieldLevel));
+        _weaponUpgrade.text = string.Format("Fire Speed\n({0})", PlayerScript.CostOfUpgrade(_player.WeaponLevel));
+        _miningUpgrade.text = string.Format("Mining Range\n({0})", PlayerScript.CostOfUpgrade(_player.MiningLevel));
     }
 
     private void Pause()

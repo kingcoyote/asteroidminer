@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour {
     public int Shields = 50;
     public float HealthPercent = 1.0f;
     public float ShieldPercent = 1.0f;
+    public float LifeSpan;
 
     public int EngineLevel { get; private set; }
     public int HealthLevel { get; private set; }
@@ -60,8 +61,10 @@ public class PlayerScript : MonoBehaviour {
         }
 
         _gunCooldown -= Time.deltaTime;
-        ShieldPercent += 0.025f * Time.deltaTime;
+        ShieldPercent += 0.025f * Time.deltaTime * ShieldLevel;
         if (ShieldPercent > 1.0f) ShieldPercent = 1.0f;
+
+        LifeSpan += Time.deltaTime;
     }
 
     public void OnCollisionEnter2D(Collision2D other)
@@ -119,7 +122,6 @@ public class PlayerScript : MonoBehaviour {
         Money -= cost;
         HealthLevel++;
 
-        Health = (int) (Health*1.25f);
         HealthPercent = 1.0f;
     }
 
@@ -131,9 +133,6 @@ public class PlayerScript : MonoBehaviour {
 
         Money -= cost;
         ShieldLevel++;
-
-        Shields = (int)(Shields * 1.25f);
-        ShieldPercent = 1.0f;
     }
 
     public void UpgradeWeapon()
