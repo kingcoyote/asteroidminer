@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour {
     public int WeaponLevel { get; private set; }
     public int MiningLevel { get; private set; }
 
+    public FloatingTextScript FloatingText;
+
     public Transform DeathAnimation;
 
     private Rigidbody2D _rigidBody2D;
@@ -73,6 +75,11 @@ public class PlayerScript : MonoBehaviour {
     {
         if (other.gameObject.GetComponentInChildren<AsteroidScript>() != null)
         {
+
+            var ft = Instantiate(FloatingText, Camera.main.WorldToScreenPoint(transform.position), new Quaternion(0, 0, 0, 0)) as FloatingTextScript;
+            ft.Immortal = false;
+            ft.Number -= (other.gameObject.GetComponentInChildren<AsteroidScript>().Health);
+
             HealthPercent -= other.gameObject.GetComponentInChildren<AsteroidScript>().Health / (float)Health;
             other.gameObject.GetComponent<AsteroidScript>().SpawnDeathAnimation();
             _audio.PlayOneShot(_audio.clip);

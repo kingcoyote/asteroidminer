@@ -44,7 +44,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   Number: -5
   Color: {r: .984313786, g: 1, b: 0, a: 1}
   Speed: 50
-  Lifetime: 2
+  Immortal: 0
 --- !u!222 &22277462
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -98,6 +98,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Number
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

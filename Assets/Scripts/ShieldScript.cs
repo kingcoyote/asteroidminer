@@ -5,11 +5,12 @@ using Random = UnityEngine.Random;
 
 public class ShieldScript : MonoBehaviour
 {
-
     private PlayerScript _player;
     private SpriteRenderer _renderer;
     public AudioClip HitClip;
     public AudioClip DropClip;
+
+    public FloatingTextScript FloatingText;
 
     private AudioSource _audio;
 
@@ -30,6 +31,11 @@ public class ShieldScript : MonoBehaviour
         {
             if (_player.IsShieldActive())
             {
+
+                var ft = Instantiate(FloatingText, Camera.main.WorldToScreenPoint(transform.position), new Quaternion(0, 0, 0, 0)) as FloatingTextScript;
+                ft.Immortal = false;
+                ft.Number -= (other.gameObject.GetComponent<AsteroidScript>().Health);
+
                 _player.ShieldPercent -= ((float)(other.gameObject.GetComponent<AsteroidScript>().Health) / _player.Shields);
                 other.gameObject.GetComponent<AsteroidScript>().SpawnDeathAnimation();
                 Destroy(other.gameObject);
