@@ -6,6 +6,7 @@ public class AsteroidScript : MonoBehaviour {
 
     public List<Transform> Minerals;
     public List<Transform> SubAsteroids;
+    public GameObject DeathAnimation;
     public int Health;
 
     // Use this for initialization
@@ -45,6 +46,18 @@ public class AsteroidScript : MonoBehaviour {
             asteroid.GetComponent<Rigidbody2D>().velocity = rb.velocity + new Vector2(Random.Range(-0.5f, 0f), Random.Range(-0.5f, 0.5f));
         }
 
+        SpawnDeathAnimation();
+
         Destroy(gameObject);
+    }
+
+    public void SpawnDeathAnimation()
+    {
+        var da = Instantiate(DeathAnimation, transform.position, new Quaternion(0, 0, 0, 0)) as GameObject;
+        da.transform.parent = null;
+        da.GetComponent<AudioSource>().Play();
+        da.GetComponentInChildren<ParticleSystem>().maxParticles = (int)(gameObject.GetComponent<Rigidbody2D>().mass/10.0f);
+
+        Destroy(da, 3);
     }
 }

@@ -6,6 +6,8 @@ public class UIScript : MonoBehaviour
 {
     public PlayerScript PlayerPrefab;
 
+    public AudioClip UpgradeClip;
+
     private PlayerScript _player;
 
     private Slider _health;
@@ -25,6 +27,8 @@ public class UIScript : MonoBehaviour
     private Button _miningUpgradeButton;
 
     private Transform _topMenuPanel;
+
+    private AudioSource _audio;
 
     private bool _isPaused;
 
@@ -48,6 +52,8 @@ public class UIScript : MonoBehaviour
         _miningUpgrade = gameObject.transform.Find("UpgradePanel/MiningUpgrade").GetComponentInChildren<Text>();
 
         _topMenuPanel = gameObject.transform.Find("TopMenuPanel");
+
+        _audio = gameObject.GetComponent<AudioSource>();
 
         Pause();
     }
@@ -120,25 +126,30 @@ public class UIScript : MonoBehaviour
     public void UpgradeEngine()
     {
         _player.UpgradeEngine();
+        _audio.PlayOneShot(UpgradeClip);
     }
 
     public void UpgradeHealth()
     {
         _player.UpgradeHealth();
+        _audio.PlayOneShot(UpgradeClip);
     }
 
     public void UpgradeShield()
     {
         _player.UpgradeShield();
+        _audio.PlayOneShot(UpgradeClip);
     }
 
     public void UpgradeWeapon()
     {
         _player.UpgradeWeapon();
+        _audio.PlayOneShot(UpgradeClip);
     }
 
     public void UpgradeMining()
     {
         _player.UpgradeMining();
+        _audio.PlayOneShot(UpgradeClip);
     }
 }

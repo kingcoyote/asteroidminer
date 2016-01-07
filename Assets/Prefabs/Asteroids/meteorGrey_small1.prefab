@@ -82,6 +82,7 @@ MonoBehaviour:
   SubAsteroids:
   - {fileID: 489920, guid: f00d25187b60c6e46b98ba61dd50b827, type: 2}
   - {fileID: 407668, guid: bb046fef442beb04ea64a5f2e015faf3, type: 2}
+  DeathAnimation: {fileID: 183266, guid: d761a16402084ef4195857a97724f6c1, type: 2}
   Health: 2
 --- !u!212 &21237686
 SpriteRenderer:
@@ -156,6 +157,10 @@ Prefab:
       propertyPath: m_TagString
       value: Disposable
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DeathAnimation
+      value: 
+      objectReference: {fileID: 183266, guid: d761a16402084ef4195857a97724f6c1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144488}

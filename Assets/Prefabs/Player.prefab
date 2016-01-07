@@ -27,6 +27,7 @@ GameObject:
   - 4: {fileID: 498662}
   - 58: {fileID: 5804140}
   - 114: {fileID: 11461068}
+  - 82: {fileID: 8278900}
   m_Layer: 12
   m_Name: MiningHarvester
   m_TagString: Untagged
@@ -84,7 +85,6 @@ GameObject:
   - 114: {fileID: 11492868}
   - 58: {fileID: 5800200}
   - 82: {fileID: 8237848}
-  - 82: {fileID: 8205578}
   m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
@@ -100,6 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 447494}
+  - 82: {fileID: 8205570}
   m_Layer: 10
   m_Name: DeathAnimation
   m_TagString: Untagged
@@ -328,18 +329,18 @@ PolygonCollider2D:
       - {x: .167318299, y: -.522112131}
       - {x: .242277846, y: -.397401154}
       - {x: .506822646, y: -.478862196}
---- !u!82 &8205578
+--- !u!82 &8205570
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176408}
+  m_GameObject: {fileID: 178238}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7019167238f8d0f4ca2a6f189a59c739, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: .25
+  m_audioClip: {fileID: 8300000, guid: 8009ba50c55775842a636efd784f1674, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -407,10 +408,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 913baa3b55fa80f48b7cf8581740ab96, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bdaf6a38dbcb0c542b3ab347831e08e9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1.79999995
+  m_Volume: .400000006
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -538,6 +539,76 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &8278900
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116114}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4f288190eb2cdaf40be668c365ceb6c2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8284122
 AudioSource:
   m_ObjectHideFlags: 1
@@ -549,7 +620,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 51c8f761b75f32648b4962b27037a505, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .800000012
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -670,10 +741,12 @@ MonoBehaviour:
   EngineForce: 500
   GunCooldown: .200000003
   Money: 0
-  Health: 10
-  Shields: 10
+  Health: 25
+  Shields: 25
   HealthPercent: 1
   ShieldPercent: 1
+  LifeSpan: 0
+  ShieldCharge: .00499999989
   DeathAnimation: {fileID: 447494}
 --- !u!114 &11492868
 MonoBehaviour:
@@ -686,6 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bea159787a59e468b8a33be2300dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitClip: {fileID: 8300000, guid: bdaf6a38dbcb0c542b3ab347831e08e9, type: 3}
+  DropClip: {fileID: 8300000, guid: a728ec869736b6241976142706de2dcc, type: 3}
 --- !u!198 &19865596
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1817,7 +1892,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7019167238f8d0f4ca2a6f189a59c739, type: 3}
+      objectReference: {fileID: 8300000, guid: 8009ba50c55775842a636efd784f1674, type: 3}
     - target: {fileID: 0}
       propertyPath: BypassReverbZones
       value: 1
@@ -1828,11 +1903,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Volume
-      value: .25
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Pitch
-      value: 1.79999995
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bdaf6a38dbcb0c542b3ab347831e08e9, type: 3}
+    - target: {fileID: 0}
+      propertyPath: DropClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a728ec869736b6241976142706de2dcc, type: 3}
+    - target: {fileID: 0}
+      propertyPath: Health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Shields
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_RoomRolloff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_DecayTime
+      value: 4.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

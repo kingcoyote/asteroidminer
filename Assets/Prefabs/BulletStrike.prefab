@@ -102,7 +102,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 765cdadf00ae4874f92a3b9030a6a142, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .25
-  m_Pitch: .449999988
+  m_Pitch: .349999994
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -3435,7 +3435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Pitch
-      value: .449999988
+      value: .349999994
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value

@@ -8,8 +8,10 @@ public class ShieldScript : MonoBehaviour
 
     private PlayerScript _player;
     private SpriteRenderer _renderer;
+    public AudioClip HitClip;
+    public AudioClip DropClip;
 
-    private AudioSource[] _audio;
+    private AudioSource _audio;
 
     // Use this for initialization
     public void Start ()
@@ -19,7 +21,7 @@ public class ShieldScript : MonoBehaviour
 
         _renderer.enabled = false;
 
-        _audio = gameObject.GetComponents<AudioSource>();
+        _audio = gameObject.GetComponent<AudioSource>();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -29,6 +31,7 @@ public class ShieldScript : MonoBehaviour
             if (_player.IsShieldActive())
             {
                 _player.ShieldPercent -= ((float)(other.gameObject.GetComponent<AsteroidScript>().Health) / _player.Shields);
+                other.gameObject.GetComponent<AsteroidScript>().SpawnDeathAnimation();
                 Destroy(other.gameObject);
                 StartCoroutine(Flicker());
             }
@@ -38,9 +41,15 @@ public class ShieldScript : MonoBehaviour
     private IEnumerator Flicker()
     {
         _renderer.enabled = true;
-        foreach (var a in _audio)
+        if (_player.IsShieldActive())
         {
-            a.PlayOneShot(a.clip);
+            _audio.volume = 0.4f;
+            _audio.PlayOneShot(HitClip);
+        }
+        else
+        {
+            _audio.volume = 1;
+            _audio.PlayOneShot(DropClip);
         }
         yield return new WaitForSeconds(Random.Range(0.2f, 0.3f));
         _renderer.enabled = false;

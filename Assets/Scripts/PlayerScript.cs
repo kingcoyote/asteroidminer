@@ -6,11 +6,12 @@ public class PlayerScript : MonoBehaviour {
     public float GunCooldown = 0.5f;
 
     public int Money;
-    public int Health = 50;
-    public int Shields = 50;
+    public int Health = 100;
+    public int Shields = 100;
     public float HealthPercent = 1.0f;
     public float ShieldPercent = 1.0f;
     public float LifeSpan;
+    public float ShieldCharge = 0.005f;
 
     public int EngineLevel { get; private set; }
     public int HealthLevel { get; private set; }
@@ -61,7 +62,8 @@ public class PlayerScript : MonoBehaviour {
         }
 
         _gunCooldown -= Time.deltaTime;
-        ShieldPercent += 0.025f * Time.deltaTime * ShieldLevel;
+        if (ShieldPercent < 0f) ShieldPercent = 0f;
+        ShieldPercent += ShieldCharge * Time.deltaTime * ShieldLevel;
         if (ShieldPercent > 1.0f) ShieldPercent = 1.0f;
 
         LifeSpan += Time.deltaTime;
@@ -72,6 +74,7 @@ public class PlayerScript : MonoBehaviour {
         if (other.gameObject.GetComponentInChildren<AsteroidScript>() != null)
         {
             HealthPercent -= other.gameObject.GetComponentInChildren<AsteroidScript>().Health / (float)Health;
+            other.gameObject.GetComponent<AsteroidScript>().SpawnDeathAnimation();
             _audio.PlayOneShot(_audio.clip);
             Destroy(other.gameObject);
         }

@@ -88,6 +88,7 @@ MonoBehaviour:
   - {fileID: 472188, guid: f43cfb9a4e788ee44851eb0450bba056, type: 2}
   - {fileID: 451016, guid: c73424dc8e828894299367320ccb58fc, type: 2}
   - {fileID: 489920, guid: f00d25187b60c6e46b98ba61dd50b827, type: 2}
+  DeathAnimation: {fileID: 183266, guid: d761a16402084ef4195857a97724f6c1, type: 2}
   Health: 4
 --- !u!212 &21246272
 SpriteRenderer:
@@ -182,6 +183,10 @@ Prefab:
       propertyPath: m_TagString
       value: Disposable
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DeathAnimation
+      value: 
+      objectReference: {fileID: 183266, guid: d761a16402084ef4195857a97724f6c1, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146404}
