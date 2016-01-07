@@ -8,6 +8,9 @@ public class UIScript : MonoBehaviour
 
     public AudioClip UpgradeClip;
 
+    public Texture2D CursorTexture;
+    public Vector2 CursorHotspot;
+
     private PlayerScript _player;
 
     private Slider _health;
@@ -35,6 +38,8 @@ public class UIScript : MonoBehaviour
     // Use this for initialization
     public void Start ()
     {
+        Cursor.SetCursor(CursorTexture, CursorHotspot, CursorMode.Auto);
+
         _health = gameObject.transform.Find("StatusPanel/HealthSlider").GetComponent<Slider>();
         _shield = gameObject.transform.Find("StatusPanel/ShieldSlider").GetComponent<Slider>();
         _money = gameObject.transform.Find("StatusPanel/MoneyText").GetComponent<Text>();
